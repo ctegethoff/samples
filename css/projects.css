@@ -1,0 +1,160 @@
+:root {
+  --dark: #202022;
+  --grey: #64646A;
+  --white: #FFFFFF;
+  --max-width: 1440px;
+}
+html {
+  display: table;
+  margin: auto;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0;
+  min-width: fit-content;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--white);
+  color: var(--dark);
+}
+.top-cap {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: var(--max-width);
+  background-color: var(--dark);
+  z-index: 10;
+}
+.title-section {
+  width: 100%;
+  max-width: var(--max-width);
+  height: auto;
+  background-size: contain;
+  background-size: cover;
+}
+.close-button {
+  position: absolute;
+  cursor: pointer;
+  background-size: contain;
+}
+.close-button:hover {
+  filter: invert(1);
+}
+.content {
+  max-width: var(--max-width);
+  box-sizing: border-box;
+}
+.highlight {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.highlight .media {
+  max-width: 640px;
+  width: 100%;
+}
+.highlight img,
+.highlight video,
+.highlight svg {
+  max-height: 360px;
+  width: 100%;
+  height: auto;
+}
+.quote {
+  color: rebeccapurple;
+  font-weight: bold;
+  text-align: center;
+  margin: 100px auto;
+}
+
+/* Desktop specific aka > 640 px */
+@media (min-width: 641px) {  
+  .content {
+    padding: 60px;
+  }  
+  .top-cap {
+    height: 150px;
+  }
+  .title-section {
+    margin: 150px 0px 60px 0px;
+  }
+  .close-button {
+    top: 48px;
+    right: 48px;
+    width: 52px;
+    height: 52px;
+    background: url('https://res.cloudinary.com/dlbnlilfj/image/upload/v1745994664/Close_Button_jor3b2.svg') no-repeat center center;
+  }
+  .highlight {
+    display: flex;
+    max-width: var(--max-width);
+    margin-bottom: 40px;
+    column-gap: 60px;
+    row-gap: 100px;
+  }
+  .highlight .text {
+    max-width: 580px;
+  }  
+  .highlight:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+  .highlight:nth-of-type(even) .text {
+    text-align: right;
+    padding-right: 16px;
+  }
+  .highlight:nth-of-type(even) .media {
+    align-content: left;
+  }
+  .highlight:nth-of-type(odd) .text {
+    text-align: left;
+    padding-left: 16px;
+  }
+  .highlight:nth-of-type(odd) .media {
+    align-content: right;
+  }
+
+  .highlight p {
+    font-size: 19pt;
+    line-height: 1.25;
+  }  
+  .quote {
+    font-size: 28pt;
+    padding: 100px auto;
+    max-width: 800px;
+  }  
+}
+
+/* Mobile specific aka <= 640 px */
+@media (max-width: 640px) {  
+  .content {
+    padding: 20px;
+  }  
+  .top-cap {
+    height: 80px;
+  }
+  .title-section {
+    margin: 80px 0px 60px 0px;
+  }
+  .close-button {
+    top: 18px;
+    right: 48px;
+    width: 32px;
+    height: 32px;
+    background: url('https://res.cloudinary.com/dlbnlilfj/image/upload/v1746471566/back_arrow_mxfrl6.svg') no-repeat center center;
+  }
+  .highlight {
+    display: block;
+  }
+  .highlight .text {
+    max-width: 640px;
+  }   
+  .highlight p {
+    font-size: 16pt;
+  }  
+  .quote {
+    font-size: 18pt;
+    margin: 60px auto;
+    max-width: 640px;
+  }   
+}

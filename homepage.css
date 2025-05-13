@@ -1,0 +1,136 @@
+:root {
+  --dark: #202022;
+  --grey: #64646A;
+  --white: #FFFFFF;
+  --max-width: 1440px;
+}
+html {
+  display: table;
+  margin: auto;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0 auto;
+  min-width: fit-content;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--white);
+  color: var(--dark);
+}
+
+.header-panel {
+  max-width: var(--max-width);
+  box-sizing: border-box;
+  width: 100%; 
+  height: 100%; 
+  position: relative;
+}
+
+.content {
+  max-width: var(--max-width);
+  box-sizing: border-box;
+}
+
+.hero {
+  background-color: var(--dark);
+  padding: 0;
+  max-width: var(--max-width);
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+}
+.hero-image {
+  width: 100%;
+}
+
+.projects-title {
+  font-size: 24pt;
+  font-weight: 400;
+  margin: 0px 0 40px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.thumbnail {
+  text-align: left;
+}
+
+.thumbnail img {
+  width: 100%;
+  transition: transform 0.2s ease;
+  transform-origin: center;
+}
+
+.thumbnail:hover img {
+  transform: scale(1.30);
+}
+
+.thumbnail p {
+  font-size: 18pt;
+  margin-top: 16px;
+  font-weight: 400;
+}
+
+.footer {
+  font-size: 24pt; 
+  font-weight: 400;
+  line-height: 1.5;
+  height: 535px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dark);
+  color: var(--white);
+  max-width: var(--max-width);
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 641px) { 
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 100px;
+    column-gap: 100px;
+    justify-content: center;
+    margin: 60px 0;
+  }   
+  .content {
+    padding: 120px;
+  }  
+  .footer-section {
+    padding: 20px 120px;
+  }  
+}
+
+@media (max-width: 640px) {  
+  .projects-title {
+    font-size: 16pt;
+    font-weight: 400;
+    margin: 20px 0 20px;
+    text-align: center;
+  }
+
+  .thumbnail p {
+    font-size: 16pt;
+  }
+    
+  .content {
+    padding: 40px;
+  }  
+  .footer {
+    font-size: 18pt; 
+    height: 400px;
+    font-weight: 400;
+  }  
+  .footer-section {
+    padding: 10px 20px;
+  }  
+}

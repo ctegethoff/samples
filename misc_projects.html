@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Misc Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark: #202022;
+      --grey: #64646A;
+      --white: #FFFFFF;
+    }
+    body {
+      margin: 0;
+      background-color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+    }
+    .top-cap {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 150px;
+      background-color: var(--dark);
+      z-index: 10;
+    }
+    .close-button {
+      position: absolute;
+      top: 48px;
+      right: 48px;
+      width: 52px;
+      height: 52px;
+      cursor: pointer;
+      background: url('https://res.cloudinary.com/dlbnlilfj/image/upload/v1745994664/Close_Button_jor3b2.svg') no-repeat center center;
+      background-size: contain;
+    }
+    .close-button:hover {
+      filter: invert(1);
+    }
+    .misc-container {
+      margin-top: 150px;
+      display: block;
+    }
+    .misc-image-wrapper {
+      position: relative;
+      width: 50%;
+      margin: 0 auto;
+      box-sizing: border-box;
+      margin-bottom: 0;
+    }
+    .misc-image-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 200ms ease-in-out;
+    }
+    .hover-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      background-color: rgba(0, 0, 0, 0);
+      transition: background-color 300ms ease, opacity 300ms ease;
+      pointer-events: none;
+    }
+    .hover-overlay span {
+      color: white;
+      font-size: 50pt;
+      font-weight: 100;
+      opacity: 0;
+      transition: opacity 300ms ease;
+    }
+    /* Mobile specific aka <= 640 px */
+    @media (max-width: 640px) {  
+      .top-cap {
+        height: 80px;
+      }
+      .close-button {
+        top: 18px;
+        right: 48px;
+        width: 32px;
+        height: 32px;
+        background: url('https://res.cloudinary.com/dlbnlilfj/image/upload/v1746471566/back_arrow_mxfrl6.svg') no-repeat center center;
+      }
+      .misc-container {
+        margin-top: 80px;
+      }    
+      .misc-image-wrapper {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-cap">
+    <div class="close-button" onclick="window.location.href='index.html'"></div>
+  </div>
+  <div class="misc-container">
+    <div class="misc-image-wrapper">
+      <img src="https://res.cloudinary.com/dlbnlilfj/image/upload/v1746736301/iot-smart-home-ux_pch1h9.webp" alt="IOT Mobile App" />
+      <div class="hover-overlay"><span>IOT Mobile App</span></div>
+    </div>
+    <div class="misc-image-wrapper">
+      <img src="https://res.cloudinary.com/dlbnlilfj/image/upload/v1746215240/MS_Surface_Music_App_drtojj.webp" alt="MS Surface Music App" />
+      <div class="hover-overlay"><span>MS Surface Music App</span></div>
+    </div>
+    <div class="misc-image-wrapper">
+      <img src="https://res.cloudinary.com/dlbnlilfj/image/upload/v1746215238/MS_Surface_360_UX_aqsahi.webp" alt="360 Touch Surface" />
+      <div class="hover-overlay"><span>360 Interactive Surface</span></div>
+    </div>
+    <div class="misc-image-wrapper">
+      <img src="https://res.cloudinary.com/dlbnlilfj/image/upload/v1746215248/Roku_Mobile_Design_tlqemb.webp" alt="Roku Mobile Design" />
+      <div class="hover-overlay"><span>Roku Mobile Design</span></div>
+    </div>
+    <div class="misc-image-wrapper">
+      <img src="https://res.cloudinary.com/dlbnlilfj/image/upload/v1746215242/Nike_Kids_Storyboard_ay53y9.webp" alt="Nike Kids Storyboard" />
+      <div class="hover-overlay"><span>Nike Kids Storyboard</span></div>
+    </div>
+    <div class="misc-image-wrapper">
+      <img src="https://res.cloudinary.com/dlbnlilfj/image/upload/v1746215244/Nike_Kids_Website_Concept_bgrali.webp" alt="Nike Kids Website Concept" />
+      <div class="hover-overlay"><span>Nike Kids Website</span></div>
+    </div>
+    <div class="misc-image-wrapper">
+      <img src="https://res.cloudinary.com/dlbnlilfj/image/upload/v1746215246/Printer_UX_uph85f.webp" alt="Printer UX" />
+      <div class="hover-overlay"><span>Printer UX</span></div>
+    </div>
+    <div class="misc-image-wrapper">
+      <img src="https://res.cloudinary.com/dlbnlilfj/image/upload/v1746215236/Iconography_j2j3m6.webp" alt="Iconography" />
+      <div class="hover-overlay"><span>Iconography</span></div>
+    </div>
+    <div class="misc-image-wrapper">
+      <img src="https://res.cloudinary.com/dlbnlilfj/image/upload/v1746215235/Icon_Sketches_t9zci1.webp" alt="Icon Sketches" />
+      <div class="hover-overlay"><span>Icon Sketches</span></div>
+    </div>
+    <div class="misc-image-wrapper">
+      <img src="https://res.cloudinary.com/dlbnlilfj/image/upload/v1746215233/Design_Systems_m2mzen.webp" alt="Design System" />
+      <div class="hover-overlay"><span>Design System</span></div>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('.misc-image-wrapper').forEach(wrapper => {
+      const overlay = wrapper.querySelector('.hover-overlay');
+      const label = overlay.querySelector('span');
+
+      wrapper.addEventListener('mouseenter', () => {
+        const timer = setTimeout(() => {
+          overlay.style.opacity = '1';
+          overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+          label.style.opacity = '1';
+        }, 1000);
+
+        wrapper.addEventListener('mouseleave', () => {
+          clearTimeout(timer);
+          overlay.style.opacity = '0';
+          overlay.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+          label.style.opacity = '0';
+        }, { once: true });
+      });
+    });
+  </script>
+</body>
+</html>
